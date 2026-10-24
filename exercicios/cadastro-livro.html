@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Bibliográfico</title>
+</head>
+<body>
+    <main>
+        <section>
+            <header>
+                <h2>CADÁSTRO DE REFERÊNCIA BIBLIOGRÁFICA</h2>
+                <p>Cadastre os livros recomendados para as disciplinas.</p>
+            </header>
+
+            <form action="/salvar-livro" method="post">
+                <fieldset>
+                    <legend>Informações da Obra</legend>
+
+                    <p>
+                        <label for="titulo-livro">Titulo do Livro:</label>
+                        <input type="text" name="titulo-livro" id="titulo-livro" autocomplete="titulo-livro" required>
+                    </p>
+
+                    <p>
+                        <label for="autor">Autor(es)</label>
+                        <input type="text" name="autor" id="autor" autocomplete="autor" required>
+                    </p>
+
+                    <p>
+                        <label for="ISBN">ISBN(13)</label>
+                        <input type="number"  name="ISBN" id="ISBN" autocomplete="ISBN" required placeholder="Apenas 13 números">
+                    </p>
+
+                    <p>
+                        <label for="ano-publicacao">Ano de Publicação:</label>
+                        <input type="date" name="ano-publicacao" id="ano-publicacao" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalhes Acadêmicos</legend>
+
+                    <p>
+                        <label for="curso-alvo">Curso Alvo:</label>
+                        <select name="curso-alvo" id="curso-alvo" required>
+                            <option value="">Selecione o curso...</option>
+                            <option value="ES">Engenharia de Software</option>
+                            <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+                            <option value="TC">Tronco Comum</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="disciplina">Disciplina:</label>
+                        <input type="text" name="disciplina" id="disciplina" required>
+                    </p>
+
+                    <p>
+                        <p>Formato:</p>
+                        <input type="radio" name="formato" id="formato-fisico" required>
+                        <label for="formato-fisico">Físico</label>
+
+                        <input type="radio" name="formato" id="formato-digital">
+                        <label for="formato-digital">Digital</label>
+
+                        <input type="radio" name="formato" id="formato-hibrido">
+                        <label for="formato-hibrido">Ambos</label>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Salvar Livro</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
